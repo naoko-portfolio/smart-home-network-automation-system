@@ -3,12 +3,18 @@
 
 
 ## Overview
-- Developed a C++ smart home automation system using TCP socket programming.
-- Implemented a multithreaded client-server architecture.
-- Simulated lighting, thermostat, and security devices.
+- Team project completed in a Data Communications and Networking course (3 members).
+- Developed a smart home automation system in C++ using TCP socket programming.
+- Implemented a multithreaded client-server architecture to support multiple simultaneous client connections.
+- Simulated smart home devices, including lighting, thermostat, and security systems.
+- Designed a segmented network using VLSM subnetting and static routing to improve network organization and scalability.
 
-## Architecture
+## Final Network Architecture
 I designed the network architecture shown below.
+
+<img width="942" height="442" alt="Network Architecture" src="https://github.com/user-attachments/assets/ca3cd7ad-0ef3-4a92-a1e6-d5540f6ec194" />
+
+
 ## Technologies
 
 - C++
@@ -24,10 +30,18 @@ I designed the network architecture shown below.
 
 - Designed the network topology
 - Planned VLSM subnetting
-- Assigned IP addresses
-- Designed router interfaces
-- Organized four network segments
-- Wrote the network architecture documentation
+- Created the IP addressing scheme
+- Assigned router interfaces and gateway addresses
+- Documented the network architecture
+
+## Design Process
+
+**Step 1**
+
+**Step 2**
+
+**Step 3**
+
 
 ## Screenshots
 ## GitHub
