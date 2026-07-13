@@ -1,3 +1,4 @@
+
 # Smart Home Network Automation System
 **Team Project (3 members)**
 
@@ -37,10 +38,15 @@ I designed the network architecture shown below.
 ## Design Process
 
 **Step 1**
+<img width="1500" height="2000" alt="1" src="https://github.com/user-attachments/assets/0041e5af-bb87-4dc1-8eae-378d98e4c853" />
+
 
 **Step 2**
+<img width="1500" height="2000" alt="2" src="https://github.com/user-attachments/assets/37c664c5-38a7-4e37-b6a3-c908e21c3754" />
+
 
 **Step 3**
+<img width="1500" height="2000" alt="3" src="https://github.com/user-attachments/assets/ee5bf21d-a1b0-4099-8994-947d4c5a851d" />
 
 
 ## Screenshots
