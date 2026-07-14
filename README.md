@@ -35,6 +35,42 @@ I designed the network architecture shown below.
 - Assigned router interfaces and gateway addresses
 - Documented the network architecture
 
+## Network Design
+
+This project uses **Variable Length Subnet Masking (VLSM)** to efficiently allocate IP address ranges based on the expected number of devices in each subnet.
+
+### Subnet Allocation
+
+| Subnet | CIDR | Subnet Mask | Network Address | Usable Hosts | Usable IP Range |
+|--------|------|-------------|-----------------|-------------:|-----------------|
+| Lighting | /26 | 255.255.255.192 | 192.168.1.0 | 62 | 192.168.1.1 – 192.168.1.62 |
+| Thermostat | /27 | 255.255.255.224 | 192.168.1.64 | 30 | 192.168.1.65 – 192.168.1.94 |
+| Security | /27 | 255.255.255.224 | 192.168.1.96 | 30 | 192.168.1.97 – 192.168.1.126 |
+| Management | /28 | 255.255.255.240 | 192.168.1.128 | 14 | 192.168.1.129 – 192.168.1.142 |
+
+### Router Interface Configuration
+
+| Router Interface | Gateway IP | Connected Subnet |
+|-----------------|------------|------------------|
+| eth0 | 192.168.1.1 | Lighting (192.168.1.0/26) |
+| eth1 | 192.168.1.65 | Thermostat (192.168.1.64/27) |
+| eth2 | 192.168.1.97 | Security (192.168.1.96/27) |
+| eth3 | 192.168.1.129 | Management (192.168.1.128/28) |
+
+### Network Design Decisions
+
+| Design Choice | Reason |
+|--------------|--------|
+| Base Network | Started with **192.168.1.0/24**, a standard private IPv4 network for LAN environments. |
+| Host Planning | Estimated the required number of devices before subnetting. |
+| VLSM | Used Variable Length Subnet Masking to allocate IP addresses efficiently. |
+| Network Segmentation | Separated Lighting, Thermostat, Security, and Management into different subnets for better organization and reduced broadcast traffic. |
+| CIDR Allocation | Used **/26**, **/27**, and **/28** according to the number of required hosts. |
+| Management Subnet | Placed the server and client in a dedicated management subnet to isolate management traffic from smart devices. |
+
+
+
+
 ## Design Process
 ### How to design networking
 1. Started with the base network 192.168.1.0/24.
